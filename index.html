@@ -35,17 +35,17 @@
       <div class="dropdown">
         <span>Rules</span>
         <div class="dropdown-content">
-          <p>Start at GO</p>
-        <p>Start out with $1500</p>
-        <p>Multiplyer player game</p>
-        <p>Each player rolls dice but player with highest number rolls first</p>
-        <p>Roll and start landing/buying</p>
+          <p>Start at GO.</p>
+        <p>Start out with $1500.</p>
+        <p>Multiplyer player game.</p>
+        <p>Each player rolls dice but player with highest number rolls first.</p>
+        <p>Roll and start landing/buying.</p>
         <p>Visit jail two times you lose the game.</p>
         <p>Each time you pass through someones property, you owe them rent.</p>
-        <p>Each time you pass through visiting, you owe a vistation fee of $75 to Parking</p>
-        <p>Each time you pass through your own property, you owe yourself rent</p>
-        <p>No $200 after passing Go</p>
-        <p>No GET OUT of jail card</p>
+        <p>Each time you pass through visiting, you owe a vistation fee of $75 to Parking.</p>
+        <p>Each time you pass through your own property, you owe yourself rent.</p>
+        <p>No $200 after passing Go.</p>
+        <p>No GET OUT of jail card.</p>
         </div>
       </div>
       
@@ -59,7 +59,7 @@
                     <h2 class="label">Community Chest</h2>
                     <div class="deck"></div>
                 </div>
-                <h1 class="title"> BANKRUPT MONOPOLY </h1>
+                <h1 class="title">  BANKRUPT MONOPOLY</h1>
                 <div class="chance-deck">
                     <h2 class="label">Chance</h2>
                     <div class="deck"></div>
@@ -112,7 +112,7 @@
                     <div class="container">
                         <div class="name">Income Tax</div>
                         <div class="diamond"></div>
-                        <div class="instructions"><br>Pay $250</div>
+                        <div class="instructions"><br>Pay $250 to Free Parking</div>
                     </div>
                 </div>
                 <div class="space property">
@@ -354,7 +354,7 @@
                     <div class="container">
                         <div class="name">Luxury Tax</div>
                         <div class="drawing fa fa-diamond"></div>
-                        <div class="instructions">Pay $75.00</div>
+                        <div class="instructions">Pay $75 to Free Parking</div>
                     </div>
                 </div>
                 <div class="space property">
@@ -784,6 +784,13 @@ h1, h2, h3, h4, h5, h6 {
   
 </head>
 <body>
+    var dice = {
+      sides: 6,
+      roll: function () {
+        var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+        return randomNumber;
+      }
+    }
     
 </body>
 

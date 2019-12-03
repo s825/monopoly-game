@@ -5,7 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Monopoly the Game</title>
-
+    <html>
+      <head>
+      <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h2>Hover mouse over rules below for rules</h2>
+      
+      <div class="dropdown">
+        <span>Rules</span>
+        <div class="dropdown-content">
+        <p>Start out with $1500</p>
+        <p>Visit jail two times you lose the game.</p>
+        <p>Each time you pass through someones property you owe them rent.</p>
+        <p>Each time you pass through visiting you owe a vistation fee of $75</p>
+        </div>
+      </div>
+      
+      </body>
+      </html>
 <html>
     <div class="table">
         <div class="board">
@@ -330,10 +368,6 @@
 
 body {
   margin: 0;
-  background-image: url("https://i.pinimg.com/originals/a4/73/cd/a473cda6c0a58d9b2e2bc2292d16c334.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  background-size: 100px;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 10px;
@@ -740,6 +774,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 </style>
+  
 </head>
 <body>
     

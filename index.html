@@ -35,6 +35,7 @@
       <div class="dropdown">
         <span>Rules</span>
         <div class="dropdown-content">
+<<<<<<< HEAD
         <p>Start out with $1500</p>
         <p>Multiplyer player game</p>
         <p>Each player rolls dice and player with highest number rolls first</p>
@@ -44,6 +45,19 @@
         <p>Each time you pass through your own property, you owe yourself rent</p>
         <p>No $200 after passing Go</p>
         <p>No GET OUT of jail card</p>
+=======
+          <p>Start at GO.</p>
+        <p>Start out with $1500.</p>
+        <p>Multiplyer player game.</p>
+        <p>Each player rolls dice but player with highest number rolls first.</p>
+        <p>Roll and start landing/buying.</p>
+        <p>Visit jail two times you lose the game.</p>
+        <p>Each time you pass through someones property, you owe them rent.</p>
+        <p>Each time you pass through visiting, you owe a vistation fee of $75 to Parking.</p>
+        <p>Each time you pass through your own property, you owe yourself rent.</p>
+        <p>No $200 after passing Go.</p>
+        <p>No GET OUT of jail card.</p>
+>>>>>>> 11203f8c0907b50e8a40d4c7a90046c966667026
         </div>
       </div>
       
@@ -57,7 +71,7 @@
                     <h2 class="label">Community Chest</h2>
                     <div class="deck"></div>
                 </div>
-                <h1 class="title"> BANKRUPT MONOPOLY </h1>
+                <h1 class="title">  BANKRUPT MONOPOLY</h1>
                 <div class="chance-deck">
                     <h2 class="label">Chance</h2>
                     <div class="deck"></div>
@@ -96,7 +110,7 @@
                     <div class="container">
                         <div class="color-bar dark-blue"></div>
                         <div class="name">Blue Card</div>
-                        <div class="price">Price $85</div>
+                        <div class="price">Price $95</div>
                     </div>
                 </div>
                 <div class="space railroad">
@@ -106,11 +120,11 @@
                         <div class="price">Price $200</div>
                     </div>
                 </div>
-                <div class="space fee income-tax">
+                <div class="space community-chest">
                     <div class="container">
-                        <div class="name">Income Tax</div>
+                        <div class="name">Community Chest</div>
                         <div class="diamond"></div>
-                        <div class="instructions">Pay 10%<br>or<br>$200</div>
+                        <div class="instructions">Follow instructions on top card</div>
                     </div>
                 </div>
                 <div class="space property">
@@ -131,7 +145,7 @@
                     <div class="container">
                         <div class="color-bar yellow"></div>
                         <div class="name three-line-name">Yellow Card</div>
-                        <div class="price">Price $50</div>
+                        <div class="price">Price $75</div>
                     </div>
                 </div>
             </div>
@@ -202,17 +216,16 @@
                         <div class="price">Price $140</div>
                     </div>
                 </div>
-                <div class="space utility electric-company">
+                <div class="space chance">
                     <div class="container">
-                        <div class="name">Electric Company</div>
+                        <div class="name">Chance</div>
                         <i class="drawing fa fa-lightbulb-o"></i>
-                        <div class="price">Price $150</div>
                     </div>
                 </div>
                 <div class="space property">
                     <div class="container">
                         <div class="color-bar purple"></div>
-                        <div class="name">St. Charles Place</div>
+                        <div class="name">Purple card</div>
                         <div class="price">Price $140</div>
                     </div>
                 </div>
@@ -244,7 +257,7 @@
                     <div class="container">
                         <div class="color-bar red"></div>
                         <div class="name">Red Card</div>
-                        <div class="price">Price $220</div>
+                        <div class="price">Price $210</div>
                     </div>
                 </div>
                 <div class="space property">
@@ -254,11 +267,10 @@
                         <div class="price">Price $200</div>
                     </div>
                 </div>
-                <div class="space railroad">
+                <div class="space chance">
                     <div class="container">
-                        <div class="name">B & O Railroad</div>
+                        <div class="name">Chance</div>
                         <i class="drawing fa fa-subway"></i>
-                        <div class="price">Price $200</div>
                     </div>
                 </div>
                 <div class="space property">
@@ -272,7 +284,7 @@
                     <div class="container">
                         <div class="color-bar yellow"></div>
                         <div class="name">Yellow Card</div>
-                        <div class="price">Price $260</div>
+                        <div class="price">Price $250</div>
                     </div>
                 </div>
                 <div class="space utility waterworks">
@@ -352,7 +364,7 @@
                     <div class="container">
                         <div class="name">Luxury Tax</div>
                         <div class="drawing fa fa-diamond"></div>
-                        <div class="instructions">Pay $75.00</div>
+                        <div class="instructions">Pay $75 to Free Parking</div>
                     </div>
                 </div>
                 <div class="space property">
@@ -781,11 +793,29 @@ h1, h2, h3, h4, h5, h6 {
 </style>
   
 </head>
-<body>
-    
+<body> 
 </body>
-
 <script>
+ var dice = {
+    sides: 6,
+    roll: function () {
+      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+      return randomNumber;
+    }
+  }
+  //Prints dice roll to the page
+
+function printNumber(number) {
+  var placeholder = document.getElementById('placeholder');
+  placeholder.innerHTML = number;
+}
+
+var button = document.getElementById('button');
+
+button.onclick = function() {
+  var result = dice.roll();
+  printNumber(result);
+};
 
 </script>
 </html>

@@ -811,6 +811,7 @@ h1, h2, h3, h4, h5, h6 {
     #placeholder {
       font-size:80px;
     }
+     
   </style>
 </head>
 <body> 
@@ -825,16 +826,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 
-function printNumber(number) {
+function printNumber(num1, num2) {
   var placeholder = document.getElementById('placeholder');
-  placeholder.innerHTML = number;
+  placeholder.innerHTML = `${num1}, ${num2}`;
 }
 
 var button = document.getElementById('button');
 
 button.onclick = function() {
-  var result = dice.roll();
-  printNumber(result);
+  var result1 = dice.roll();
+  var result2 = dice.roll();
+  printNumber(result1,result2);
 };
 
 </script>

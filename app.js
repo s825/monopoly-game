@@ -19,3 +19,12 @@ button.onclick = function() {
   var result2 = dice.roll();
   printNumber(result1,result2);
 };
+function movePiece(piece, moveBy) {
+  currentSpace = ?;
+  targetSpace = currentSpace + moveBy;
+  piece = document.getElementById(piece);
+  piece.remove()
+  targetSpace = document.querySelector(`#space${targetSpace} .container`);
+  targetSpace.appendChild(piece);
+
+}
